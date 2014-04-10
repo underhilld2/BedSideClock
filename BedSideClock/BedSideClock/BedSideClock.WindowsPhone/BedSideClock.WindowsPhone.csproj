@@ -123,6 +123,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\XamlHelpers\XamlHelpers.csproj">
+      <Project>{61caef61-c127-4078-bed3-ffc55a4ff766}</Project>
+      <Name>XamlHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

@@ -10,7 +10,15 @@
 
 
     <Application.Resources>
-        <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+        
+        <ResourceDictionary>
+            <!--other resources can be here-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/AppColors.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+        </ResourceDictionary>
     </Application.Resources>
     
 </Application>

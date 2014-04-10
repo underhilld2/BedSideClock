@@ -5,11 +5,21 @@
     xmlns:local="using:BedSideClock.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:XamlHelpers.Converters"
     mc:Ignorable="d"
     DataContext="{Binding StartupPageVM, Source={StaticResource Locator}}"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Page.Resources>
+        <converters:DateToStringFormatter x:Key="DateToStringFormatter"/>
+    </Page.Resources>
+    
     <Grid>
-    	<TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay}" Margin="131,264,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" FontWeight="Bold">
+        	<TextBlock.Foreground>
+        		<SolidColorBrush Color="{StaticResource MainTextForeground_Color}"/>
+        	</TextBlock.Foreground>
+        </TextBlock>
 
     </Grid>
 </Page>

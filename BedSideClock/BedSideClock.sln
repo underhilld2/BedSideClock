@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{416B2C
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlHelpers", "XamlHelpers\XamlHelpers.csproj", "{61CAEF61-C127-4078-BED3-FFC55A4FF766}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		BedSideClock\BedSideClock.Shared\BedSideClock.Shared.projitems*{4a6665f0-a28c-40d2-bce9-293c52112bf9}*SharedItemsImports = 13
@@ -79,6 +81,16 @@ Global
 		{10AEF833-6C58-4195-AA13-6F09904CC8F1}.Release|x86.ActiveCfg = Release|x86
 		{10AEF833-6C58-4195-AA13-6F09904CC8F1}.Release|x86.Build.0 = Release|x86
 		{10AEF833-6C58-4195-AA13-6F09904CC8F1}.Release|x86.Deploy.0 = Release|x86
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|ARM.ActiveCfg = Release|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|x64.ActiveCfg = Release|Any CPU
+		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
