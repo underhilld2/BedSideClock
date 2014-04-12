@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace BedSideClock.Logic
+namespace SharedLogicLibrary.Logic
 {
    public abstract class PropertyChangeLogic : INotifyPropertyChanged
    {

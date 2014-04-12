@@ -141,6 +141,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SharedLogicLibrary\SharedLogicLibrary.csproj">
+      <Project>{04f26867-49eb-493e-8236-401fb12699ef}</Project>
+      <Name>SharedLogicLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\XamlHelpers\XamlHelpers.csproj">
       <Project>{61caef61-c127-4078-bed3-ffc55a4ff766}</Project>
       <Name>XamlHelpers</Name>

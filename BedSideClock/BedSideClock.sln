@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+VisualStudioVersion = 12.0.30312.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BedSideClock", "BedSideClock", "{87423EBD-1821-4FD9-83F4-D51BD6366A60}"
 EndProject
@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{416B2C
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlHelpers", "XamlHelpers\XamlHelpers.csproj", "{61CAEF61-C127-4078-BED3-FFC55A4FF766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLogicLibrary", "SharedLogicLibrary\SharedLogicLibrary.csproj", "{04F26867-49EB-493E-8236-401FB12699EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BedSideClock80", "BedSideClock80\BedSideClock80.csproj", "{76C9382A-6480-468E-8D5E-088C029F73A0}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -91,6 +95,36 @@ Global
 		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|ARM.ActiveCfg = Release|Any CPU
 		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|x64.ActiveCfg = Release|Any CPU
 		{61CAEF61-C127-4078-BED3-FFC55A4FF766}.Release|x86.ActiveCfg = Release|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Release|ARM.ActiveCfg = Release|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Release|x64.ActiveCfg = Release|Any CPU
+		{04F26867-49EB-493E-8236-401FB12699EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|ARM.Build.0 = Debug|ARM
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|ARM.Deploy.0 = Debug|ARM
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|x86.ActiveCfg = Debug|x86
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|x86.Build.0 = Debug|x86
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Debug|x86.Deploy.0 = Debug|x86
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|ARM.ActiveCfg = Release|ARM
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|ARM.Build.0 = Release|ARM
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|ARM.Deploy.0 = Release|ARM
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|x64.ActiveCfg = Release|Any CPU
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|x86.ActiveCfg = Release|x86
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|x86.Build.0 = Release|x86
+		{76C9382A-6480-468E-8D5E-088C029F73A0}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

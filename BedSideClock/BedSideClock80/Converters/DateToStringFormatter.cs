@@ -1,12 +1,11 @@
 ﻿using System;
-using Windows.UI.Xaml.Data;
+using System.Windows.Data;
 
-
-namespace XamlHelpers.Converters
+namespace BedSideClock80.Converters
 {
    public sealed class DateToStringFormatter : IValueConverter
    {
-      public object Convert(object value, Type targetType, object parameter, string language)
+     public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
       {
          if (value is DateTime)
          {
@@ -33,9 +32,11 @@ namespace XamlHelpers.Converters
          return "";
       }
 
-      public object ConvertBack(object value, Type targetType, object parameter, string language)
+     public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
       {
          throw new NotImplementedException();
       }
+
+
    }
 }

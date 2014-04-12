@@ -1,9 +1,11 @@
 ﻿using System;
 using Windows.UI.Xaml;
+using SharedLogicLibrary.Logic;
+
 
 namespace BedSideClock.Logic
 {
-   public class ClockTimer : PropertyChangeLogic
+   public class ClockTimer : PropertyChangeLogic, IClockTimer
    {
       private DispatcherTimer _dispatcherTimer;
 
@@ -16,10 +18,9 @@ namespace BedSideClock.Logic
       }
 
 
-      private void dispatcherTimer_Tick(object sender, object e)
+     public void dispatcherTimer_Tick(object sender, object e)
       {
          NotifyPropertyChanged("CurrentDateTime");
-         //NotifyPropertyChanged("CurrentTime");
       }
 
       public DateTime CurrentDateTime
@@ -27,13 +28,7 @@ namespace BedSideClock.Logic
          get { return DateTime.Now; }
       }
 
-      //public string CurrentTime
-      //{
-      //   get
-      //   {
-      //      return String.Format("{0:h:m:s tt}", DateTime.Now);
-      //   }
-      //}
+
 
 
    }
