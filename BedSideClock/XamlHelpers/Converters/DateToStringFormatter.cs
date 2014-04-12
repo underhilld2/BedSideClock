@@ -24,6 +24,10 @@ namespace XamlHelpers.Converters
                      return string.Format(" {0:MM/dd/yyyy}", dt);
                   case "time":
                      return string.Format(" {0:T}", dt);
+                  case "hour":
+                     return string.Format(" {0:hh}", dt);
+                  case "minute":
+                     return string.Format(" {0:mm}", dt);
                }
             }
 

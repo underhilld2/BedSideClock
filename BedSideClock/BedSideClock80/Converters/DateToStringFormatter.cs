@@ -13,17 +13,21 @@ namespace BedSideClock80.Converters
 
             if (parameter is string)
             {
-               switch ((parameter as string).ToLower())
-               {
-                  case "datetime":
-                     return string.Format("{0:MMMM dd, yyyy - h:mm tt}", dt);
-                  case "date":
-                     return string.Format("{0:MMMM dd, yyyy}", dt);
-                  case "short":
-                     return string.Format(" {0:MM/dd/yyyy}", dt);
-                  case "time":
-                     return string.Format(" {0:T}", dt);
-               }
+              switch ((parameter as string).ToLower())
+              {
+                case "datetime":
+                  return string.Format("{0:MMMM dd, yyyy - h:mm tt}", dt);
+                case "date":
+                  return string.Format("{0:MMMM dd, yyyy}", dt);
+                case "short":
+                  return string.Format(" {0:MM/dd/yyyy}", dt);
+                case "time":
+                  return string.Format(" {0:T}", dt);
+                case "hour":
+                  return string.Format(" {0:hh}", dt);
+                case "minute":
+                  return string.Format(" {0:mm}", dt);
+              }
             }
 
             return dt.ToString();
