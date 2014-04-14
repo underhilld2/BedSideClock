@@ -13,6 +13,12 @@
     <Page.Resources>
         <converters:DateToStringFormatter x:Key="DateToStringFormatter"/>
     </Page.Resources>
+	<Page.BottomAppBar>
+		<CommandBar>
+			<AppBarButton Icon="Add" Label="Alarm Settings"/>
+			<AppBarButton Icon="Setting" Label="Options"/>
+		</CommandBar>
+	</Page.BottomAppBar>
     
     <Grid>
         <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" FontWeight="Bold">
