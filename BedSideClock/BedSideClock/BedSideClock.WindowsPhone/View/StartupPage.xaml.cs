@@ -35,5 +35,11 @@ namespace BedSideClock.View
       protected override void OnNavigatedTo(NavigationEventArgs e)
       {
       }
+
+      private void AppBarButton_Click(object sender, RoutedEventArgs e)
+      {
+        Windows.UI.Xaml.Controls.Frame rootFrame = Window.Current.Content as Frame;
+        rootFrame.Navigate(typeof(AlarmSettings));
+      }
    }
 }
