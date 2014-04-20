@@ -16,8 +16,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Logic\ClockTimer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Common\ContinuationManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\ContinuationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\StartupViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
   </ItemGroup>
