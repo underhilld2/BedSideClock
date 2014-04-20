@@ -15,6 +15,9 @@
 	<Page.BottomAppBar>
 		<AppBar>
 			<Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition/>
 					<ColumnDefinition/>
@@ -32,16 +35,18 @@
 
   
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
-      <Frame  x:Name="ScenarioFrame" Background="Black">
+
       <StackPanel>
         <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}" Margin="0" Height="Auto" Width="Auto" FontSize="{ThemeResource HubHeaderThemeFontSize}" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">
         	  <TextBlock.Foreground>
         		  <SolidColorBrush Color="{StaticResource MainTextForeground_Color}"/>
         	  </TextBlock.Foreground>
           </TextBlock>
-        <TextBlock x:Name="OutputTextBlock"  TextWrapping="Wrap"/>
+        <TextBlock x:Name="OutputTextBlock" Text="No Image selected." TextWrapping="Wrap"/>
+
+      <Button Height="112" Width="194" Content="Push Me" Click="BackgroundButton_Click"/>
       </StackPanel>
-    </Frame>
+
 
     </Grid>
 </Page>
