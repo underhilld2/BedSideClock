@@ -22,9 +22,16 @@ namespace BedSideClock.View
    /// </summary>
    public sealed partial class StartupPage : Page
    {
+
+     public static StartupPage Current;
       public StartupPage()
       {
          this.InitializeComponent();
+      }
+
+      private void BackgroundButton_Click(object sender, RoutedEventArgs e)
+      {
+
       }
    }
 }

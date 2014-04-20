@@ -13,19 +13,26 @@
     <Page.Resources>
         <converters:DateToStringFormatter x:Key="DateToStringFormatter"/>
     </Page.Resources>
-	<Page.BottomAppBar>
-		<CommandBar>
-			<AppBarButton Icon="Add" Label="Alarm Settings" Click="AppBarButton_Click"/>
-			<AppBarButton Icon="Setting" Label="Options"/>
-		</CommandBar>
-	</Page.BottomAppBar>
+  <Page.BottomAppBar>
+    <CommandBar>
+      <AppBarButton Icon="Add" Label="Alarm Settings"/>
+      <AppBarButton Icon="Setting" Label="Options"/>
+      <AppBarButton Icon="Find" Label="Back Ground" Click="BackgroundButton_Click"/>
+    </CommandBar>
+  </Page.BottomAppBar>
     
     <Grid>
-        <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" FontWeight="Bold">
-        	<TextBlock.Foreground>
-        		<SolidColorBrush Color="{StaticResource MainTextForeground_Color}"/>
-        	</TextBlock.Foreground>
-        </TextBlock>
 
-    </Grid>
+    <Frame  x:Name="ScenarioFrame" Background="Black">
+      <StackPanel>
+      <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" FontWeight="Bold">
+        <TextBlock.Foreground>
+          <SolidColorBrush Color="{StaticResource MainTextForeground_Color}"/>
+        </TextBlock.Foreground>
+      </TextBlock>
+      <TextBlock x:Name="OutputTextBlock"  TextWrapping="Wrap"/>
+      </StackPanel>
+    </Frame>
+
+  </Grid>
 </Page>
