@@ -17,6 +17,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Logic\ClockTimer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\ContinuationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\Interfaces\IFileOpenPickerContinuable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\Interfaces\IFileSavePickerContinuable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\Interfaces\IFolderPickerContinuable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\Interfaces\IWebAuthenticationContinuable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\SuspensionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\StartupViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />

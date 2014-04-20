@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BedSideClock.PhoneSessionManager;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
@@ -8,6 +9,7 @@ using Windows.Storage;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using BedSideClock.PhoneSessionManager.Interfaces;
 
 namespace BedSideClock.WinPhoneSessionManagers
 {
@@ -142,60 +144,7 @@ namespace BedSideClock.WinPhoneSessionManagers
     }
   }
 
-  /// <summary>
-  /// Implement this interface if your page invokes the file open picker
-  /// API.
-  /// </summary>
-  internal interface IFileOpenPickerContinuable
-  {
-    /// <summary>
-    /// This method is invoked when the file open picker returns picked
-    /// files
-    /// </summary>
-    /// <param name="args">Activated event args object that contains returned files from file open picker</param>
-    void ContinueFileOpenPicker(FileOpenPickerContinuationEventArgs args);
-  }
-
-  /// <summary>
-  /// Implement this interface if your page invokes the file save picker
-  /// API
-  /// </summary>
-  internal interface IFileSavePickerContinuable
-  {
-    /// <summary>
-    /// This method is invoked when the file save picker returns saved
-    /// files
-    /// </summary>
-    /// <param name="args">Activated event args object that contains returned file from file save picker</param>
-    void ContinueFileSavePicker(FileSavePickerContinuationEventArgs args);
-  }
-
-  /// <summary>
-  /// Implement this interface if your page invokes the folder picker API
-  /// </summary>
-  internal interface IFolderPickerContinuable
-  {
-    /// <summary>
-    /// This method is invoked when the folder picker returns the picked
-    /// folder
-    /// </summary>
-    /// <param name="args">Activated event args object that contains returned folder from folder picker</param>
-    void ContinueFolderPicker(FolderPickerContinuationEventArgs args);
-  }
-
-  /// <summary>
-  /// Implement this interface if your page invokes the web authentication
-  /// broker
-  /// </summary>
-  internal interface IWebAuthenticationContinuable
-  {
-    /// <summary>
-    /// This method is invoked when the web authentication broker returns
-    /// with the authentication result
-    /// </summary>
-    /// <param name="args">Activated event args object that contains returned authentication token</param>
-    void ContinueWebAuthentication(WebAuthenticationBrokerContinuationEventArgs args);
-  }
+ 
 
 #endif
 }

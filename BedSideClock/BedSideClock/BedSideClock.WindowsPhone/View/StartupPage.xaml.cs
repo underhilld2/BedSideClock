@@ -5,6 +5,8 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
+using BedSideClock.PhoneSessionManager;
+using BedSideClock.PhoneSessionManager.Interfaces;
 using BedSideClock.WinPhoneSessionManagers;
 
 namespace BedSideClock.View
