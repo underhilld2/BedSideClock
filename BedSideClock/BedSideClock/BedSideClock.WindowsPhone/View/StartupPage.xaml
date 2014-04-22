@@ -15,7 +15,7 @@
     </Page.Resources>
   <Page.BottomAppBar>
     <CommandBar>
-      <AppBarButton Icon="Add" Label="Alarm Settings"/>
+      <AppBarButton Icon="Add" Label="Alarm Settings" Click="AppBarButton_Click"/>
       <AppBarButton Icon="Setting" Label="Options"/>
       <AppBarButton Icon="Find" Label="Back Ground" Click="BackgroundButton_Click"/>
     </CommandBar>

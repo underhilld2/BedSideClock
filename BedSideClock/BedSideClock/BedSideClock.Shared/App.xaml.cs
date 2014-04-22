@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Globalization;
+using Windows.Phone.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -21,6 +22,7 @@ namespace BedSideClock
     private ContinuationManager continuationManager;
 #endif
 
+
     /// <summary>
     ///   Initializes the singleton Application object.  This is the first line of authored code
     ///   executed, and as such is the logical equivalent of main() or WinMain().
@@ -29,8 +31,28 @@ namespace BedSideClock
     {
       InitializeComponent();
       Suspending += OnSuspending;
+
+#if WINDOWS_PHONE_APP
+      HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+#endif
     }
 
+
+#if WINDOWS_PHONE_APP
+    private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
+    {
+      Frame rootFrame = Window.Current.Content as Frame;
+
+      if (rootFrame != null)
+      {
+        if (rootFrame.CanGoBack)
+        {
+          rootFrame.GoBack();
+          e.Handled = true;
+        }
+      }
+    }
+#endif
     private Frame CreateRootFrame()
     {
       var rootFrame = Window.Current.Content as Frame;
