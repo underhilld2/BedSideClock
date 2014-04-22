@@ -4,10 +4,13 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Globalization;
+#if WINDOWS_PHONE_APP
 using Windows.Phone.UI.Input;
+#endif
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using BedSideClock.Common;
 using BedSideClock.View;
 using BedSideClock.WinPhoneSessionManagers;
 
