@@ -39,8 +39,9 @@
   <ItemGroup>
     <Compile Include="Logic\IClockTimer.cs" />
     <Compile Include="Logic\PropertyChangeLogic.cs" />
-    <Compile Include="Logic\RandomLocationGenerator.cs" />
+    <Compile Include="RandomLocation\RandomLocationGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomLocation\ScreenLocation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
