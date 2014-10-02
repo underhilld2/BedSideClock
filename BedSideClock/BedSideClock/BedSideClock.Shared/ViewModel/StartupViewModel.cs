@@ -1,5 +1,4 @@
-﻿using System;
-using BedSideClock.Logic;
+﻿using BedSideClock.Logic;
 using GalaSoft.MvvmLight;
 
 namespace BedSideClock.ViewModel
