@@ -20,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ImageHelpers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\ClockTimer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\ContinuationManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\Interfaces\IFileOpenPickerContinuable.cs" />

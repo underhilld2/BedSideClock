@@ -2,10 +2,12 @@
 using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 using BedSideClock.Common;
+using BedSideClock.Helpers;
 using BedSideClock.PhoneSessionManager.Interfaces;
 
 
@@ -47,11 +49,16 @@ namespace BedSideClock.View
       openPicker.PickSingleFileAndContinue();
     }
 
-    public void ContinueFileOpenPicker(FileOpenPickerContinuationEventArgs args)
+    public async void ContinueFileOpenPicker(FileOpenPickerContinuationEventArgs args)
     {
       if (args.Files.Count > 0)
       {
         OutputTextBlock.Text = "Picked photo: " + args.Files[0].Name;
+
+        BitmapImage img = new BitmapImage();
+        img = await ImageHelpers.LoadImage( args.Files[0] );
+        MyPicture.Source = img;
+
       }
     }
   }

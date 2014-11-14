@@ -8,46 +8,91 @@
     xmlns:converters="using:XamlHelpers.Converters"
     xmlns:common="using:BedSideClock.Common"
     mc:Ignorable="d"
-    DataContext="{Binding StartupPageVM, Source={StaticResource Locator}}"
-    >
-  <common:BasePage.Resources>
-        <converters:DateToStringFormatter x:Key="DateToStringFormatter"/>
+    DataContext="{Binding StartupPageVM, Source={StaticResource Locator}}">
+    <common:BasePage.Resources>
+        <converters:DateToStringFormatter
+            x:Key="DateToStringFormatter" />
     </common:BasePage.Resources>
-  <common:BasePage.BottomAppBar>
-		<AppBar>
-			<Grid>
+    <common:BasePage.BottomAppBar>
+        <AppBar>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <AppBarButton
+                        HorizontalAlignment="Stretch"
+                        Icon="Add"
+                        Label="Alarm Settings"
+                        VerticalAlignment="Stretch" />
+                    <AppBarSeparator
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" />
+                    <AppBarButton
+                        HorizontalAlignment="Stretch"
+                        Icon="Setting"
+                        Label="Options"
+                        VerticalAlignment="Stretch" />
+                    <AppBarButton
+                        Icon="Find"
+                        Label="Back Ground"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Click="BackgroundButton_Click" />
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal" />
+            </Grid>
+        </AppBar>
+    </common:BasePage.BottomAppBar>
+
+
+    <Grid
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-          <RowDefinition Height="100"/>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
-				</Grid.ColumnDefinitions>
-				<StackPanel Orientation="Horizontal">
-					<AppBarButton HorizontalAlignment="Stretch" Icon="Add" Label="Alarm Settings" VerticalAlignment="Stretch"/>
-					<AppBarSeparator HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-					<AppBarButton HorizontalAlignment="Stretch" Icon="Setting" Label="Options" VerticalAlignment="Stretch"/>
-          <AppBarButton Icon="Find" Label="Back Ground" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="BackgroundButton_Click"/>
-				</StackPanel>
-				<StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
-			</Grid>
-		</AppBar>
-	</common:BasePage.BottomAppBar>
 
-  
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <StackPanel>
+            <TextBlock
+                Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}"
+                Margin="0"
+                Height="Auto"
+                Width="Auto"
+                FontSize="{ThemeResource HubHeaderThemeFontSize}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontWeight="Bold">
+                <TextBlock.Foreground>
+                    <SolidColorBrush
+                        Color="{StaticResource MainTextForeground_Color}" />
+                </TextBlock.Foreground>
+            </TextBlock>
+            <TextBlock
+                x:Name="OutputTextBlock"
+                Text="No Image selected."
+                TextWrapping="Wrap" />
 
-      <StackPanel>
-        <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}" Margin="0" Height="Auto" Width="Auto" FontSize="{ThemeResource HubHeaderThemeFontSize}" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">
-        	  <TextBlock.Foreground>
-        		  <SolidColorBrush Color="{StaticResource MainTextForeground_Color}"/>
-        	  </TextBlock.Foreground>
-          </TextBlock>
-        <TextBlock x:Name="OutputTextBlock" Text="No Image selected." TextWrapping="Wrap"/>
+            <Button
+                Height="112"
+                Width="194"
+                Content="Push Me"
+                Click="BackgroundButton_Click" />
 
-      <Button Height="112" Width="194" Content="Push Me" Click="BackgroundButton_Click"/>
-      </StackPanel>
+        </StackPanel>
 
-
+        <Image
+            x:Name="MyPicture"
+            Grid.Row="1"
+            Stretch="UniformToFill" />
     </Grid>
 </common:BasePage>

@@ -11,29 +11,55 @@
     DataContext="{Binding StartupPageVM, Source={StaticResource Locator}}"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-  <common:BasePage.Resources>
-        <converters:DateToStringFormatter x:Key="DateToStringFormatter"/>
+    <common:BasePage.Resources>
+        <converters:DateToStringFormatter
+            x:Key="DateToStringFormatter" />
     </common:BasePage.Resources>
-  <common:BasePage.BottomAppBar>
-    <CommandBar>
-      <AppBarButton Icon="Add" Label="Alarm Settings" Click="AppBarButton_Click"/>
-      <AppBarButton Icon="Setting" Label="Options"/>
-      <AppBarButton Icon="Find" Label="Back Ground" Click="BackgroundButton_Click"/>
-    </CommandBar>
-  </common:BasePage.BottomAppBar>
-    
+    <common:BasePage.BottomAppBar>
+        <CommandBar>
+            <AppBarButton
+                Icon="Add"
+                Label="Alarm Settings"
+                Click="AppBarButton_Click" />
+            <AppBarButton
+                Icon="Setting"
+                Label="Options" />
+            <AppBarButton
+                Icon="Find"
+                Label="Back Ground"
+                Click="BackgroundButton_Click" />
+        </CommandBar>
+    </common:BasePage.BottomAppBar>
+
     <Grid>
-
-    <Frame  x:Name="ScenarioFrame" Background="Black">
-      <StackPanel>
-      <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}" FontWeight="Bold">
-        <TextBlock.Foreground>
-          <SolidColorBrush Color="{StaticResource MainTextForeground_Color}"/>
-        </TextBlock.Foreground>
-      </TextBlock>
-      <TextBlock x:Name="OutputTextBlock"  TextWrapping="Wrap"/>
-      </StackPanel>
-    </Frame>
-
-  </Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame
+            x:Name="ScenarioFrame"
+            Background="Black">
+            <StackPanel>
+                <TextBlock
+                    Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"
+                    FontWeight="Bold">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush
+                            Color="{StaticResource MainTextForeground_Color}" />
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <TextBlock
+                    x:Name="OutputTextBlock"
+                    TextWrapping="Wrap" />
+            </StackPanel>
+        </Frame>
+        <Image
+            x:Name="MyPicture"
+            Grid.Row="1"
+            Stretch="UniformToFill" />
+    </Grid>
 </common:BasePage>

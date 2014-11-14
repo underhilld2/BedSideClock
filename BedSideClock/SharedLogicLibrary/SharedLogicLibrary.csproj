@@ -35,8 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\ClockTimer.cs" />
     <Compile Include="Logic\IClockTimer.cs" />
     <Compile Include="Logic\PropertyChangeLogic.cs" />
     <Compile Include="RandomLocation\RandomLocationGenerator.cs" />
