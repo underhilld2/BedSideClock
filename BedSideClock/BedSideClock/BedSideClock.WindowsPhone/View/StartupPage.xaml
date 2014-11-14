@@ -1,65 +1,68 @@
-﻿<common:BasePage
-    x:Class="BedSideClock.View.StartupPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:BedSideClock.View"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:converters="using:XamlHelpers.Converters"
-    xmlns:common="using:BedSideClock.Common"
-    mc:Ignorable="d"
-    DataContext="{Binding StartupPageVM, Source={StaticResource Locator}}"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<common:BasePage x:Class="BedSideClock.View.StartupPage"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:local="using:BedSideClock.View"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:converters="using:XamlHelpers.Converters"
+                 xmlns:common="using:BedSideClock.Common"
+                 xmlns:controls="using:BedSideClock.Controls"
+                 mc:Ignorable="d"
+                 DataContext="{Binding StartupPageVM, Source={StaticResource Locator}}"
+                 Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <common:BasePage.Resources>
-        <converters:DateToStringFormatter
-            x:Key="DateToStringFormatter" />
+        <converters:DateToStringFormatter x:Key="DateToStringFormatter" />
     </common:BasePage.Resources>
     <common:BasePage.BottomAppBar>
         <CommandBar>
-            <AppBarButton
-                Icon="Add"
-                Label="Alarm Settings"
-                Click="AppBarButton_Click" />
-            <AppBarButton
-                Icon="Setting"
-                Label="Options" />
-            <AppBarButton
-                Icon="Find"
-                Label="Back Ground"
-                Click="BackgroundButton_Click" />
+            <AppBarButton Icon="Add"
+                          Label="Alarm Settings"
+                          Click="AppBarButton_Click" />
+            <AppBarButton Icon="Setting"
+                          Label="Options" />
+            <AppBarButton Icon="Find"
+                          Label="Back Ground"
+                          Click="BackgroundButton_Click" />
         </CommandBar>
     </common:BasePage.BottomAppBar>
 
-    <Grid>
+    <Grid Background="{ThemeResource PhoneBackgroundBrush}">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Frame
-            x:Name="ScenarioFrame"
-            Background="Black">
+        <Frame x:Name="ScenarioFrame"
+               Background="{ThemeResource PhoneBackgroundBrush}">
             <StackPanel>
-                <TextBlock
-                    Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}"
-                    Margin="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"
-                    FontWeight="Bold">
+                <TextBlock Text="{Binding CurrentDateTime.CurrentDateTime, Mode=OneWay,Converter={StaticResource DateToStringFormatter}, ConverterParameter=time}"
+                           Margin="0,0,0,0"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="{StaticResource TextStyleExtraExtraLargeFontSize}"
+                           FontWeight="Bold">
                     <TextBlock.Foreground>
-                        <SolidColorBrush
-                            Color="{StaticResource MainTextForeground_Color}" />
+                        <SolidColorBrush Color="{StaticResource MainTextForeground_Color}" />
                     </TextBlock.Foreground>
                 </TextBlock>
-                <TextBlock
-                    x:Name="OutputTextBlock"
-                    TextWrapping="Wrap" />
+                <TextBlock x:Name="OutputTextBlock"
+                           TextWrapping="Wrap" />
+
+                <TextBlock x:Name="SharedPhoneColor"
+                           Text="Color based on Phone TextBoxForegroundHeaderThemeBrush"
+                           Foreground="{ThemeResource PhoneForegroundBrush}"></TextBlock>
             </StackPanel>
         </Frame>
-        <Image
-            x:Name="MyPicture"
-            Grid.Row="1"
-            Stretch="UniformToFill" />
+        <StackPanel Grid.Row="1"
+                    Background="Black">
+            <Image x:Name="MyPicture"
+                   Stretch="UniformToFill" />
+            <TextBlock x:Name="SharedPhoneColor2"
+                       Text="Color based on Phone TextBoxForegroundHeaderThemeBrush"
+                       Foreground="{ThemeResource PhoneForegroundBrush}"></TextBlock>
+        </StackPanel>
+
+        <controls:SharedControl Grid.Row="2"></controls:SharedControl>
     </Grid>
 </common:BasePage>

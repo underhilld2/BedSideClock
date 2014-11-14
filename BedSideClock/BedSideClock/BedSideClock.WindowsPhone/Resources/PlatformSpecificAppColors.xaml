@@ -6,7 +6,7 @@
 
     <Color x:Key="MainTextForeground_Color">#FF275889</Color>
 
-
-
+    <SolidColorBrush x:Key="PlatformSpecificTextForground"
+                     Color="{StaticResource PhoneForegroundBrush}"></SolidColorBrush>
 
 </ResourceDictionary>

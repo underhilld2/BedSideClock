@@ -20,6 +20,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\SharedControl.xaml.cs">
+      <DependentUpon>SharedControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ImageHelpers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\ClockTimer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PhoneSessionManager\ContinuationManager.cs" />
@@ -31,6 +34,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\SharedControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Resources\AppColors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
