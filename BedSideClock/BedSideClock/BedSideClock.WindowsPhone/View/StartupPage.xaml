@@ -16,12 +16,12 @@
     </common:BasePage.Resources>
     <common:BasePage.BottomAppBar>
         <CommandBar>
-            <AppBarButton Icon="Add"
+            <AppBarButton Icon="Find"
                           Label="Alarm Settings"
                           Click="AppBarButton_Click" />
             <AppBarButton Icon="Setting"
                           Label="Options" />
-            <AppBarButton Icon="Find"
+            <AppBarButton Icon="Add"
                           Label="Back Ground"
                           Click="BackgroundButton_Click" />
         </CommandBar>
@@ -57,7 +57,10 @@
         <StackPanel Grid.Row="1"
                     Background="Black">
             <Image x:Name="MyPicture"
-                   Stretch="UniformToFill" />
+                   Stretch="UniformToFill"
+                   Width="300"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Stretch" />
             <TextBlock x:Name="SharedPhoneColor2"
                        Text="Color based on Phone TextBoxForegroundHeaderThemeBrush"
                        Foreground="{ThemeResource PhoneForegroundBrush}"></TextBlock>

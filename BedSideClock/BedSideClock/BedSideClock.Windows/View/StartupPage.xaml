@@ -80,9 +80,11 @@
 
         <Image x:Name="MyPicture"
                Grid.Row="1"
-               Stretch="UniformToFill" />
+               Stretch="UniformToFill"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               Width="500" />
 
-        <controls:SharedControl Grid.Row="2"
-                                ></controls:SharedControl>
+        <controls:SharedControl Grid.Row="2"></controls:SharedControl>
     </Grid>
 </common:BasePage>
