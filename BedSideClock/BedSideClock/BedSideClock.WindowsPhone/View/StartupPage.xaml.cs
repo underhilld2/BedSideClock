@@ -1,5 +1,6 @@
 ﻿using Windows.ApplicationModel.Activation;
 using Windows.Storage.Pickers;
+using Windows.Storage.Search;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
@@ -23,6 +24,11 @@ namespace BedSideClock.View
     public StartupPage()
     {
       InitializeComponent();
+
+//#if WINDOWS_APP
+      var temp = new QueryOptions();
+//#endif
+
     }
 
 
